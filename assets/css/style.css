@@ -20,6 +20,7 @@
 body {
     background-color: var(--light);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
 }
 
 /* HEADER */
@@ -28,18 +29,18 @@ header {
     padding: 20px;
     background-color: var(--dark);
     color: var(--light);
+    min-width: 100px;
 }
 
 header h1 {
     display: inline-block;
-    font-size: 60px;
+    font-size: 300%;
 }
 
 header nav {
     float: right;
-    font-size: 25px;
+    font-size: 150%;
 }
-
 
 header nav ul li {
     display: inline-block;
@@ -57,7 +58,7 @@ header nav ul li a:link, a:visited {
     background-color: var(--light);
     color: var(--dark);
     border: 2px solid var(--color1);
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-align: center;
     text-decoration: none;
 }
@@ -81,7 +82,7 @@ main {
     flex: 0 1 auto;
     justify-content: space-between;
     width: 100%;
-    height: 300px;
+    height: 100%;
     padding: 50px;
     background-color: var(--background2);
     color: var(--dark);
@@ -91,29 +92,60 @@ main {
 
 .sections h2 {
     display: inline-block;
-    margin-bottom: 20px;
-    font-size: 36px;
+    font-size: 200%;
+}
+
+.sections p {
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+#work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 footer {
     padding: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 150%;
 }
+
 
 /*Images*/
 
-.main-image {
-    display: inline-block;
+#main-image {
+    display: flex;
+    float: right;
     margin: 10px;
     max-width: 100%;
 }
 
 .images {
-    display: inline-block;
-    width:50%;
-    height:100%;
-    object-fit:cover;
+    margin-bottom: 20px;
+    display: flex;
+    float: right;
+    width: 60%;
+    justify-content: flex-end;
+}
+
+#about {
+    display: flex;
+    margin: 10px;
+    width: 30%;
+    height: auto;
+}
+
+.column {
+    float: left;
+    width: 50%;
+} 
+
+#resume-image {
+    display: flex;
+    float: right;
+    width: 60%;
 }
 
 /* Responsive Design */
@@ -122,13 +154,12 @@ footer {
     header, main, nav {
       flex-direction: column;
     }
-  
-    section {
-      padding-right: 0;
+    
+    header nav ul li {
+        flex-direction: column;
     }
-  
-    aside {
-      width: 100%;
-      text-align: center;
+
+    .column {
+        width: 100%;
     }
   }
