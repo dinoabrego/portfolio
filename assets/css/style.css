@@ -1,0 +1,88 @@
+/* GENERAL STYLES */
+:root {
+    /* declare a variable with `--` syntax */
+    --dark: #081018;
+    --light: #fff;
+    --background1: #cc97da;
+    --background2: rgb(180, 180, 180);
+    --background3: rgb(197, 171, 197);
+    --navlink-color: #9c00cc;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--background2);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* HEADER */
+
+header {
+    padding: 20px;
+    background-color: var(--background1);
+    color: var(--dark);
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 60px;
+}
+
+header nav {
+    float: right;
+    font-size: 25px;
+}
+
+
+header nav ul li {
+    display: inline-block;
+    background-color: var(--light);
+}
+
+header nav ul li a {
+    display: block;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+  }
+
+header nav ul li a:hover {
+    background-color: var(--dark);
+  }
+
+/* Main */
+
+main {
+    width: 100%;
+    display: block;
+    padding: 20px;
+}
+
+/* Content */
+
+.sections {
+    display: flex;
+    float: center;
+    width: 100%;;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 50px;
+    background-color: var(--background3);
+    color: var(--dark);
+}
+
+.sections img {
+    display: inline-block;
+    max-height: 200px;
+}
+
+.sections h2 {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
